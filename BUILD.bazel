@@ -1,0 +1,12 @@
+#genrule(
+#  name = "generate_localdev_init",
+#  outs = ["init_localdev.sh"],
+#  cmd = "./$(location //projects/py-localdev-init:generate_init_script) > $@",
+#  tools = ["//projects/py-localdev-init:generate_init_script"],
+#)
+#
+#
+#sh_binary(
+#    name = "init_localdev",
+#    srcs = [":generate_localdev_init"],
+#)
